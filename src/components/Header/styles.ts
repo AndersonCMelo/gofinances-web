@@ -5,19 +5,27 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
-  background: #5636d3;
+  background: #3326ae;
   padding: 30px 0;
 
   header {
     width: 1120px;
     margin: 0 auto;
-    padding: ${({ size }) => (size === 'small' ? '0 20px ' : '0 20px 150px')};
+    padding: 0 20px 260px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
+    img {
+      width: 300px;
+    }
+
     nav {
+      display: flex;
+
       a {
+        display: flex;
+        align-items: center;
         color: #fff;
         text-decoration: none;
         font-size: 16px;
@@ -29,6 +37,25 @@ export const Container = styled.div<ContainerProps>`
 
         &:hover {
           opacity: 0.6;
+        }
+
+        .img {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 60px;
+          height: 60px;
+          border-radius: 20px;
+          background: #fff;
+
+          img {
+            width: 24px;
+          }
+        }
+
+        p {
+          color: #d9f8ff;
+          margin-left: 10px;
         }
       }
     }
