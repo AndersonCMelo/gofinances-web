@@ -68,6 +68,9 @@ const Import: React.FC = () => {
             <Link to="/import">
               <li className="active">Importar</li>
             </Link>
+            <Link to="/register">
+              <li>Cadastrar</li>
+            </Link>
           </ul>
         </NavContainer>
 

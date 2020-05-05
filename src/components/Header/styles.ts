@@ -9,12 +9,17 @@ export const Container = styled.div<ContainerProps>`
   padding: 30px 0;
 
   header {
-    width: 1120px;
+    width: 100%;
+    max-width: 1120px;
     margin: 0 auto;
     padding: 0 20px 260px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 1040px) {
+      width: 94%;
+    }
 
     img {
       width: 300px;

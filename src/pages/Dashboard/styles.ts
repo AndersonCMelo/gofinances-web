@@ -9,6 +9,10 @@ export const Container = styled.div`
   max-width: 1120px;
   margin: 0 auto;
   padding: 40px 20px;
+
+  @media (max-width: 1040px) {
+    width: 94%;
+  }
 `;
 
 export const Title = styled.h1`
@@ -37,6 +41,48 @@ export const NavContainer = styled.div`
       background: #f2f7ff;
       border-radius: 14px 14px 0px 0px;
       color: #061058;
+    }
+  }
+`;
+
+export const CardBlock = styled.section`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 32px;
+  margin-top: -260px;
+  margin-bottom: 40px;
+
+  @media (max-width: 1040px) {
+    overflow: scroll;
+  }
+`;
+
+export const Card = styled.div`
+  background: ${({ total }: CardProps): string =>
+    total ? 'linear-gradient(90deg, #F26B7F 0%, #F8AF4B 100%)' : '#fff'};
+  padding: 36px 20px;
+  border-radius: 30px;
+  color: ${({ total }: CardProps): string => (total ? '#fff' : '#363F5F')};
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+  display: flex;
+
+  div {
+    margin-left: 20px;
+
+    p {
+      font-size: 16px;
+      color: ${({ total }: CardProps): string => (total ? '#fff' : '#969CB3')};
+    }
+
+    h1 {
+      margin-top: 4px;
+      font-size: 36px;
+      font-weight: normal;
+      line-height: 36px;
+
+      @media (max-width: 1040px) {
+        font-size: 28px;
+      }
     }
   }
 `;
@@ -79,6 +125,17 @@ export const TableContainer = styled.section`
       }
 
       &.outcome {
+        color: #f26b7f;
+      }
+    }
+
+    button {
+      background: none;
+      border: none;
+      color: #969cb3;
+      transition: 400ms ease;
+
+      &:hover {
         color: #f26b7f;
       }
     }
