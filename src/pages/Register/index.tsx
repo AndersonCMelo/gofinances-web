@@ -20,7 +20,7 @@ const Register: React.FC = () => {
 
       history.push('/');
     } catch {
-      alert('Erro ao cadastrar caso, tente novamente.');
+      alert('Erro ao cadastrar transação, tente novamente.');
     }
   }
 
